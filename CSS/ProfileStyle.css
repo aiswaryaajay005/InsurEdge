@@ -1,0 +1,79 @@
+
+/* Inline CSS for the page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #970747;
+    text-align: center;
+}
+
+#profile {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#profile h3 {
+    color: #970747;
+    margin-bottom: 10px;
+}
+
+#profile p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 5px 0;
+}
+
+#profile p strong {
+    color: #970747;
+}
+
+.button {
+    background-color: #970747;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: #7f0539;
+}
+
+.edit-btn,
+.logout-btn {
+    display: inline-block;
+    background-color: #970747;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.edit-btn:hover,
+.logout-btn:hover {
+    background-color: #7f0539;
+}

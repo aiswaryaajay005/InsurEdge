@@ -1,0 +1,101 @@
+
+/* Container for form styling */
+.container {
+    margin-left: 260px;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+}
+
+input, select, textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #970747;
+}
+
+button {
+    background-color: #970747;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(187, 85, 100);
+}
+
+/* Additional Styling for select options */
+select:disabled {
+    background-color: #e9ecef;
+}
+/* Styling for the Policy Type dropdown */
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    background-color: #fff;
+    color: #333;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+select:focus {
+    border-color: #970747;
+    background-color: #e9f5ff;
+}
+
+/* Disabled option styling */
+select option:disabled {
+    color: #999;
+    background-color: #f9f9f9;
+}
+
+/* Styling for select options */
+option {
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Additional hover effect for select */
+select:hover {
+    border-color: #970747;
+}

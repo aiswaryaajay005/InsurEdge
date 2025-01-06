@@ -1,0 +1,219 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 28px;
+    color: #970747;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 24px;
+    color: #970747;
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 20px;
+    color: #970747;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+li {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Add some spacing between sections */
+.insurance-type {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Add spacing for links */
+a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Styling for sidebar (if used) */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    height: 100%;
+    padding-top: 20px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background-color: #444;
+}
+
+/* Button Styling */
+button {
+    background-color: #970747;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: rgb(118, 30, 30);
+}
+
+button:active {
+    background-color: #970747;
+}
+
+/* Form Styling (Optional) */
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="number"], select, textarea {
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+input[type="submit"], button {
+    width: auto;
+    align-self: center;
+}
+
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    p, li {
+        font-size: 14px;
+    }
+
+    .sidebar {
+        width: 200px;
+        position: relative;
+    }
+
+    .sidebar a {
+        font-size: 14px;
+    }
+}
+/* Prompt for login or registration */
+.auth-prompt {
+    text-align: center;
+    background-color: #fff3cd;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.auth-prompt h2 {
+    font-size: 24px;
+    color: #d39e00;
+    font-weight: 600;
+}
+
+.auth-prompt p {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.auth-buttons a {
+    text-decoration: none;
+    margin: 10px;
+}
+
+.auth-buttons button {
+    background-color: #970747;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.auth-buttons button:hover {
+    background-color: #970743;
+}
+
+.auth-buttons button:active {
+    background-color: #970747;
+}

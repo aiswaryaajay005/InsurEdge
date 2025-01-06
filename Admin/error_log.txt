@@ -1,0 +1,2 @@
+2024-12-14 07:44:21 - Email error: SMTP Error: Could not connect to SMTP host. Connection failed. stream_socket_enable_crypto(): SSL operation failed with code 1. OpenSSL Error messages:
+error:0A000086:SSL routines::certificate verify failedSMTP server error: QUIT command failed

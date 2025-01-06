@@ -1,0 +1,39 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.policy-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto;
+}
+
+h1 {
+    color: #970747;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #970747;
+    margin-top: 20px;
+}
+
+p, ul {
+    color: #666;
+    line-height: 1.6;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}

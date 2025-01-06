@@ -1,0 +1,188 @@
+/* General Reset and Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #970747;
+    color: white;
+    padding: 20px 0;
+}
+
+#top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+
+#logo img {
+    width: 150px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcccb;
+}
+
+nav ul li.active a {
+    color: #ffcccb;
+}
+
+/* Hero Section */
+#hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 5%;
+    gap: 20px;
+    background: linear-gradient(to right, #970747, #ff99cc); /* Keep the gradient background */
+    color: white;
+}
+
+#par {
+    flex: 1;
+    max-width: 50%; /* Adjust width */
+}
+
+#par h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: black; /* Welcome message in black */
+}
+
+#par .welcome {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #ff1493; /* Slogan in dark pink */
+}
+
+#par p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* Image Container */
+#image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* For small circles positioning */
+}
+
+/* Main Circle Image */
+.circle {
+    width: 250px; /* Adjust size */
+    height: 250px; /* Adjust size */
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#hompic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Small Circles */
+.small-circles {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%; /* Stretch across the container */
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none; /* Avoid affecting interactions */
+}
+
+.small-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ff99cc; /* Match the gradient's lighter pink */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.left-circle {
+    position: absolute;
+    left: -60px; /* Adjust distance from main circle */
+}
+
+.right-circle {
+    position: absolute;
+    right: -60px; /* Adjust distance from main circle */
+}
+
+/* Footer */
+footer {
+    background-color: #970747;
+    color: white;
+    padding: 20px 5%;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #par, #image-container {
+        max-width: 100%;
+    }
+
+    .small-circles {
+        top: auto;
+        bottom: -60px; /* Move small circles below main image */
+        justify-content: center;
+    }
+
+    .left-circle, .right-circle {
+        position: relative;
+        margin: 0 10px;
+    }
+}

@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<!-- policyadd.html -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascading Dropdown Example</title>
+</head>
+<body>
+    <h1>InsurEdge</h1>
+    <h2>New Policy</h2>
+
+    <label for="category">Category</label><br>
+    <select id="category" onchange="updatePolicies()">
+        <option value="">Select a category</option>
+    </select><br><br>
+
+    <label for="policy">Policy</label><br>
+    <select id="policy">
+        <option value="">Select a policy</option>
+    </select><br><br>
+    <label for="policyname">Policy Name</label><br>
+    <input type="text" id="policyname" ><br><br>
+    <label for="sum">Sum Assured</label><br>
+    <input type="text" id="sum" ><br><br>
+    <label for="premium">Premium</label><br>
+    <input type="text" id="premium" ><br><br>
+    <label for="tenure">Tenure</label><br>
+    <input type="text" id="tenure" ><br><br>
+    <label for="policyd">Policy Details</label><br>
+    <textarea id="policyd" name="policyd" rows="4" cols="30"></textarea>
+    <br><br>
+    <input type="submit" name="polup" value="Submit" class="btn btn-primary" />
+    <script>
+      // Example data
+const data = {
+   
+    "Life Insurance": ["Term Life","Whole Life","Endowment Plans","ULIPS","Child Plans","Pension Plans"],
+  "Health Insurance":["Individual","Family Floater","Critical Illness","Senior Citizen","Group Health","Maternity health","Personal Accident"],
+  "Motor Insurance":["Car","Bike","Commercial Vehicle"],
+  "Home Insurance": ["Home Structure/Building","public Liability Coverage","Standard fire and Special perils Policy","Personal accident","Bulgary and theft","Contents Insurance","Tenants Insurance","LandLord's Insurance"],
+  "Travel Insurance":["Domestic Travel Insurance","International Travel Insurance","Individual Travel Insurance","Student Travel Insurance" ,"Senior Citizen Travel Insurance","Family Travel Insurance"]
+};
+
+// Populate categories dropdown on page load
+window.onload = function() {
+    const categorySelect = document.getElementById('category');
+    for (let category in data) {
+        const option = document.createElement('option');
+        option.value = category;
+        option.textContent = category;
+         if (category === "Home Insurance") {
+            option.disabled = true;
+         }
+         if (category === "Travel Insurance") {
+            option.disabled = true;
+         }
+        categorySelect.appendChild(option);
+    }
+};
+
+// Update policies dropdown based on selected category
+function updatePolicies() {
+    const categorySelect = document.getElementById('category');
+    const policySelect = document.getElementById('policy');
+    const selectedCategory = categorySelect.value;
+
+    // Clear current options in policy dropdown
+    policySelect.innerHTML = '<option value="">Select a policy</option>';
+
+    if (selectedCategory) {
+        const policies = data[selectedCategory];
+        for (let i = 0; i < policies.length; i++) {
+            const option = document.createElement('option');
+            option.value = policies[i];
+            option.textContent = policies[i];
+            if (policies[i] === "Group Health") {
+                 option.disabled = true;
+             }
+             if (policies[i] === "Maternity health") {
+                 option.disabled = true;
+             }
+             if (policies[i] === "") {
+                 option.disabled = true;
+             }
+            policySelect.appendChild(option);
+        }
+    }
+}
+
+    </script>
+</body>
+</html>

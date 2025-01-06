@@ -1,0 +1,93 @@
+/* Style for the entire body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for the content */
+.container {
+    width: 60%;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading style */
+h2 {
+    font-size: 24px;
+    color: #333333;
+    text-align: center;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Form label styling */
+label {
+    font-size: 16px;
+    color: #333333;
+}
+
+/* Input field styling */
+input[type="text"], input[type="email"], input[type="number"], input[type="date"] {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Submit button styling */
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    padding: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Error message */
+.error-message {
+    color: red;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Back button styling */
+button[type="button"] {
+    background-color: #f44336;
+    color: white;
+    font-size: 18px;
+    padding: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button[type="button"]:hover {
+    background-color: #e53935;
+}

@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+ body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: #970747;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #970747;
+        }
+
+        .contact-info,
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center horizontally */
+            justify-content: center; /* Center vertically */
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info h3,
+        .contact-form h3 {
+            margin-bottom: 10px;
+        }
+
+        .contact-info p {
+            text-align: center; /* Center text */
+            margin: 5px 0;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #970747;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #970742;
+        }
+
+        .image-container {
+            text-align: center; /* Center the image */
+            margin-bottom: 20px;
+        }
+        .home-button {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #970747;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .home-button:hover {
+            background-color: #970742;
+        }
+
+        .image-container img {
+            max-width: 60%; /* Make image responsive */
+            height: auto;    /* Maintain aspect ratio */
+            border-radius: 8px; /* Optional: Round the image corners */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="image-container">
+        <img src="../Images/contact.png" alt="Contact Us" />
+        <!-- Replace the URL with the path to your image -->
+    </div>
+
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+        <h3>Our Address</h3>
+        <p>123 Main St,Kerala CA 94105</p>
+        <h3>Email ID</h3>
+        <p>Email: <a href="mailto:insuredgeinsurance@gmail.com">insuredgeinsurance@gmail.com</a></p>
+        <h3>Contact</h3>
+        <p>Phone: +1 23494 34993</p>
+    </div>
+
+    
+    <form id="contactForm" action="../Connection/Contact.php" method="POST" onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <span class="error" id="nameError"></span>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+        <span class="error" id="emailError"></span>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Write your message here..." rows="6" required></textarea>
+        <span class="error" id="messageError"></span>
+
+        <input type="submit" value="Send Message">
+    </form>
+</div>
+
+<script>
+    function validateForm() {
+        // Clear previous error messages
+        document.getElementById('nameError').innerText = '';
+        document.getElementById('emailError').innerText = '';
+        document.getElementById('messageError').innerText = '';
+
+        let valid = true;
+
+        // Get form values
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        // Name validation
+        if (name === '') {
+            document.getElementById('nameError').innerText = 'Name is required.';
+            valid = false;
+        }
+
+        // Email validation
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (email === '') {
+            document.getElementById('emailError').innerText = 'Email is required.';
+            valid = false;
+        } else if (!emailPattern.test(email)) {
+            document.getElementById('emailError').innerText = 'Please enter a valid email address.';
+            valid = false;
+        }
+
+        // Message validation
+        if (message === '') {
+            document.getElementById('messageError').innerText = 'Message is required.';
+            valid = false;
+        }
+
+        return valid; // Return true if all validations pass, otherwise false
+    }
+</script>
+
+</body>
+</html>

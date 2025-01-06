@@ -1,0 +1,185 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar styling */
+.sidebar {
+    background-color: #970747; /* Darker gradient */
+    
+    width: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: fixed;  /* Keeps the sidebar fixed while scrolling */
+    top: 0;
+    bottom: 0;
+    box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.sidebar h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ecf0f1;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Sidebar links and list */
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+.sidebar ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    color: lightcoral;  /* Highlight color */
+    padding-left: 10px;  /* Slight shift to the left on hover */
+}
+
+.sidebar ul li a .icon {
+    margin-right: 10px;
+    font-size: 22px;
+    transition: all 0.3s ease;
+}
+
+.sidebar ul li a:hover .icon {
+    color: #3498db;  /* Icon color change on hover */
+}
+
+/* Sidebar active link styling */
+.sidebar ul li a.active {
+    background-color: #2980b9;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: white;
+}
+
+/* Footer for sidebar */
+.sidebar .footer {
+    margin-top: auto;
+    font-size: 14px;
+    text-align: center;
+    color: #bdc3c7;
+    border-top: 1px solid #ecf0f1;
+    padding: 10px 0;
+}
+
+/* Main content styling */
+.main-content {
+    margin-left: 250px;  /* Offset the content to the right of the sidebar */
+    padding: 40px 30px;
+    background-color: #fff;  /* Solid background color (no gradient) */
+    color: #2C3E50;
+    border-radius: 15px;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;  /* Ensure content area fills the full height of the screen */
+    flex-grow: 1;  /* Allow this area to grow and fill the space */
+}
+
+/* Main content heading */
+.main-content h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #2C3E50;
+}
+
+/* Main content paragraph */
+.main-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #7f8c8d;
+}
+
+/* Button styling */
+.main-content .btn {
+    padding: 12px 24px;
+    background-color: #970747;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.main-content .btn:hover {
+    background-color: lightpink;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+    }
+    .sidebar ul li {
+        font-size: 16px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+        min-height: auto;
+    }
+}
+.badge {
+    background-color: #ff6f61; /* Bright red for visibility */
+    color: white;
+    border-radius: 50%;
+    font-size: 0.8em;
+    padding: 5px 10px;
+    margin-left: 10px;
+    vertical-align: middle;
+    display: inline-block;
+    min-width: 20px;
+    text-align: center;
+}
+
+.notification-badge {
+    background: #f00;
+    color: #fff;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 12px;
+    display: inline-block;
+    margin-left: 5px;
+    visibility: hidden;
+}

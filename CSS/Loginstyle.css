@@ -1,0 +1,106 @@
+/* Loginstyle.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #970747; /* Background in #970747 */
+  color: white; /* Text color in white */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#container {
+  text-align: center;
+  width: 80%;
+  max-width: 600px;
+  height: 60%;
+  padding: 20px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: #fff; /* White background for the container */
+  color: #970747; /* Text color in #970747 */
+}
+
+#logo img {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 2px solid #970747;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #970747;
+}
+
+#user-options {
+  display: flex;
+  gap: 1%;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.user-box {
+  text-align: center;
+  width: 120px;
+}
+
+.user-box a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #970747;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.user-box a:hover {
+  background-color: white;
+  color: #970747;
+}
+
+.box-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box-content img {
+  margin-bottom: 10px;
+  border-radius: 50%;
+  border: 2px solid white; /* Keeps the border white */
+  background-color: white; /* White background for visibility */
+  padding: 5px; /* Space between the image and the white background */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Optional: Adds a soft shadow */
+}
+
+
+h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+#back-button {
+  margin-top: 20px;
+}
+
+#back-button a {
+  display: inline-block;
+  text-decoration: none;
+  color: #970747;
+  padding: 20px 20px;
+  border: 2px solid #970747;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#back-button a:hover {
+  background-color: #970747;
+  color: white;
+}

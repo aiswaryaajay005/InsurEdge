@@ -1,0 +1,133 @@
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(to bottom, #ffffff, #f5f5f5); /* Shades of white */
+    padding-top: 20px;
+    color: #333; /* Dark text for contrast */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.show {
+    transform: translateX(0);
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2); /* Adds shadow effect when sidebar is shown */
+}
+
+/* Sidebar header styling */
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333; /* Darker color for header text */
+}
+
+/* Sidebar links styling */
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 12px 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 6px;
+}
+
+.sidebar ul li a {
+    color: #333; /* Dark color for text */
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+/* Hover Effect on Sidebar Links */
+.sidebar ul li:hover {
+    background-color: #e6e6e6; /* Light gray on hover */
+    transform: translateX(5px); /* Pushes the link to the right */
+}
+
+.sidebar ul li a:hover {
+    color: #666; /* Dark gray on hover */
+    padding-left: 10px; /* Adds a left padding effect on hover */
+}
+
+/* Active Link Effect */
+.sidebar ul li a.active {
+    color: #444; /* Slightly darker gray for active link */
+    font-weight: 600;
+    padding-left: 12px; /* Adds extra padding for active state */
+}
+
+/* Content Area Styling */
+.content {
+    margin-left: 260px;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+/* When Sidebar is Open, Adjust Content Area */
+.sidebar.show ~ .content {
+    margin-left: 0;
+}
+
+/* Toggle Button Styling */
+.toggle-button, #show-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #f5f5f5; /* Lighter background for the button */
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0;
+    z-index: 1001;
+    transition: background-color 0.3s ease;
+}
+
+#show-button:hover, .toggle-button:hover {
+    background-color: #e6e6e6; /* Slightly lighter on hover */
+}
+
+/* Hamburger Lines Styling */
+.hamburger-line {
+    width: 20px;
+    height: 3px;
+    background-color: #333; /* Dark lines for contrast */
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+}
+
+/* Smooth Transition for Sidebar When Opening/Closing */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px; /* Smaller sidebar for mobile */
+    }
+
+    .sidebar ul li {
+        font-size: 16px;
+    }
+
+    .toggle-button {
+        top: 10px;
+        left: 10px;
+        width: 35px;
+        height: 35px;
+    }
+}
+

@@ -1,0 +1,110 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #970747;
+    text-align: center;
+    margin-top: 30px;
+}
+
+h3 {
+    text-align: center;
+    color: #555;
+}
+
+form {
+    background-color: #fff;
+    max-width: 400px;
+    padding: 20px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Inputs */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="submit"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Radio Buttons */
+#radio p {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Button Styling */
+input[type="submit"] {
+    background-color: #970747;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #c33876;
+}
+
+/* Go Back Button */
+.button {
+    display: inline-block;
+    background-color: #970747;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: rgb(183, 61, 79);
+}
+
+/* Centering and small styling for link */
+a {
+    text-decoration: none;
+    color: #970747;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Email Availability Message */
+#emailMessage {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    form {
+        width: 90%;
+    }
+}
+

@@ -1,0 +1,52 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Font style */
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333; /* Dark text color */
+}
+
+.container {
+    width: 80%; /* Container width */
+    max-width: 600px; /* Maximum width */
+    margin: 50px auto; /* Center container */
+    padding: 20px; /* Padding inside container */
+    background-color: #fff; /* White background for the container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+h2 {
+    margin-bottom: 20px; /* Space below the heading */
+    color: #4CAF50; /* Green color for heading */
+}
+
+p {
+    margin: 15px 0; /* Margin above and below paragraph */
+    font-size: 1.1em; /* Slightly larger font for messages */
+    color: #555; /* Darker gray for text */
+}
+
+button {
+    padding: 10px 15px; /* Padding inside button */
+    font-size: 1em; /* Font size */
+    color: #fff; /* White text color */
+    background-color: #4CAF50; /* Green background */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+button:focus {
+    outline: none; /* Remove outline on focus */
+}

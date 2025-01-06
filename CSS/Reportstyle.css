@@ -1,0 +1,74 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.payment-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #970747;
+    margin-bottom: 20px;
+}
+
+.payment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.payment-table thead {
+    background-color: #970747;
+    color: white;
+}
+
+.payment-table th, .payment-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.payment-table th {
+    font-weight: bold;
+}
+
+.payment-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.payment-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.overdue-row {
+    background-color: #ffcccc !important; /* Light red background with high priority */
+}
+
+
+button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button:hover:not([disabled]) {
+    background-color: #218838;
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Management System - Protect Your Future</title>
+    <link rel="stylesheet" href="../CSS/Homestyle.css">
+    <style>
+        /* General Reset */
+        body, h1, h2, h3, p, ul, li, a {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #970747;
+            color: white;
+            padding: 20px 0;
+        }
+
+        #top-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+        }
+
+        #logo img {
+            width: 150px;
+            max-width: 100%;
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffcccb;
+        }
+
+        nav ul li.active a {
+            color: #ffcccb;
+        }
+
+        /* Hero Section */
+        #hero-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            padding: 50px 5%;
+            background:white;
+            color: white;
+            flex-wrap: wrap;
+        }
+
+        #par {
+            flex: 1;
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+
+        #par h1 {
+            font-size: 3em;
+            color: #000;
+            margin-bottom: 20px;
+        }
+
+        #par .welcome {
+            font-size: 1.8em;
+            color: #970747;
+            margin-bottom: 20px;
+        }
+
+        #par p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        #image-container {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            position: relative;
+            max-width: 100%;
+        }
+
+       /* Adjusted styles for the circle and image inside */
+.circle {
+    width: 100%;
+    max-width: 400px; /* Increased the max-width for the circle */
+    height: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#hompic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the area while maintaining its aspect ratio */
+}
+
+
+      
+      
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #hero-section {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 5%;
+            }
+
+            #par {
+                margin-bottom: 20px;
+                max-width: 100%;
+            }
+
+            #image-container {
+                max-width: 100%;
+                margin-top: 20px;
+            }
+
+          
+
+            .circle {
+                max-width: 100%;
+                width: 80%;
+                height: auto;
+            }
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #970747;
+            color: white;
+            text-align: center;
+            padding: 20px 5%;
+            margin-top: auto; /* Ensures footer is pushed to the bottom */
+        }
+
+        footer ul {
+            margin: 10px 0;
+            padding: 0;
+        }
+
+        footer ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        footer ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <div id="top-header">
+        <div id="logo">
+            <img src="../Images/Screenshot (31).png" alt="Insurance Management System Logo">
+        </div>
+        <nav>
+            <ul>
+                <li class="active"><a href="home.html">Home</a></li>
+                <li><a href="Aboutus.html">About Us</a></li>
+                <li><a href="Insure.html">Services</a></li>
+                <li><a href="Login.html">Login</a></li>
+                <li><a href="Register.php">Register</a></li>
+                <li><a href="Policy_info.php">Insurance Guide</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section id="hero-section">
+    <div id="par">
+        <h1>Welcome to InsurEdge</h1>
+        <p class="welcome">Protect Your Future, Empower Your Present</p>
+        <p>
+            Hello, and welcome to InsurEdge, your trusted partner in safeguarding what matters most. 
+            We provide comprehensive insurance solutions, ranging from health to home, tailored to fit your unique needs.
+        </p>
+        <p>
+            At InsurEdge, we believe in offering more than just policies — we offer peace of mind.
+        </p>
+    </div>
+    <div id="image-container">
+        <div class="circle">
+            <img id="hompic" src="../Images/Image.png" alt="Insurance Policy">
+        </div>
+      
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 InsurEdge. All rights reserved.</p>
+    <ul>
+        <li><a href="Privacy.html">Privacy Policy</a></li>
+        <li><a href="Terms.html">Terms & Conditions</a></li>
+    </ul>
+</footer>
+
+</body>
+</html>

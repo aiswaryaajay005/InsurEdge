@@ -1,0 +1,139 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+    margin: 0;
+    font-family: Arial, sans-serif; /* Set a clean and professional font */
+    line-height: 1.6; /* Improve readability */
+    background-color: #eef3f9; /* Soft blue background for the body */
+}
+
+/* Main Content Area */
+main {
+    flex: 1; /* Push the footer to the bottom */
+    padding: 20px; /* Add some padding around the content */
+    background-color: #ffffff; /* White background for contrast */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #970747; /* Blue footer */
+    color: white;
+    border-radius: 10px 10px 0 0; /* Rounded top corners */
+    font-size: 0.9rem;
+}
+
+/* Header Styling */
+header {
+    background: #970747; /* Blue header */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Policy List Styling */
+.policy-list {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column by default */
+    gap: 20px; /* Space between items */
+    margin-top: 20px;
+}
+
+.policy-item {
+    background: lightpink; /* Very light pink card background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effects */
+}
+
+.policy-item:hover {
+    transform: scale(1.03); /* Slight zoom on hover */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.policy-item h2 {
+    color: #970747; /* Deep blue titles */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.policy-item p {
+    margin-bottom: 10px;
+    color: #333; /* Darker gray for text */
+}
+
+/* Links */
+.policy-link,
+.view-policies-link {
+    display: inline-block;
+    background: #970747; /* Blue button */
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px; /* Rounded corners */
+    transition: background 0.3s ease;
+}
+
+.policy-link:hover,
+.view-policies-link:hover {
+    background: #970470; /* Slightly darker blue on hover */
+}
+
+/* Registration/Login Prompt Styling */
+.login-prompt {
+    margin-top: 30px;
+    text-align: center;
+    background: #eef3f9; /* Light blue background for prompt */
+    padding: 15px;
+    border: 1px solid #d0e0f0; /* Subtle border */
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.login-prompt p {
+    font-size: 1.1rem;
+    color: #004080; /* Deep blue for text */
+    margin: 10px 0;
+}
+
+.login-prompt a {
+    color: #0066cc; /* Blue links */
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.login-prompt a:hover {
+    color: #004080; /* Darker blue for hover effect */
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+    .policy-list {
+        grid-template-columns: 1fr 1fr; /* Two columns for medium screens */
+    }
+}
+
+@media (min-width: 900px) {
+    .policy-list {
+        grid-template-columns: 1fr 1fr 1fr; /* Three columns for large screens */
+    }
+}
